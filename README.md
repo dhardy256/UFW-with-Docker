@@ -1,5 +1,4 @@
-Configuring UFW for use with Docker
-==================
+# Configuring UFW for use with Docker
 
 ## Preface
 
@@ -21,9 +20,9 @@ There are **no critical services running on this dev VM**.
 
 Configure UFW to filter Docker network traffic the same way it filters host traffic with three basic rules:
 
-1. Filter Docker network traffic based on user-created ufw rules
-2. Allow established/related traffic
-3. Log and drop all other traffic
+1. Filter Docker network traffic based on user-created ufw rules (the rules listed with `sudo ufw status`)
+2. Allow established/related Docker network traffic
+3. Log and drop all other Docker network traffic
 
 ## Docker image building limitations
 
