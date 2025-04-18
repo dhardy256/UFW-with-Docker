@@ -112,17 +112,34 @@ Verify UFW blocking port 80 requests with:
 tail -f /var/log/ufw.log
 ```
 
-NGINX homepage should NOT be accessible until port 80 is opened with UFW:
+NGINX homepage should **NOT** be accessible until port 80 is opened with UFW:
 
 ```
 sudo ufw allow 80
 ```
 
+Clean up:
+
+```
+sudo docker rm -f nginx
+```
+
+```
+sudo docker network rm webhosting
+```
+
+```
+sudo ufw status numbered
+```
+
+Use `sudo ufw delete` [number] <br>
+to delete 'allow port 80' rules.
+
 ## Partial docker-compose example:
 
 ```
 networks:
-  logging:
+  webhosting:
     name: webhosting
     ipam:
       driver: default
