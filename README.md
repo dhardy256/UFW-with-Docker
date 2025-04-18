@@ -37,7 +37,8 @@ The options here are:
 
 2. Do **not** allow DNS, 80, and 443 out and **build images on another device**
 
-The solution below is for **option 1a**.
+The solution below is for **option 1a**.<br>
+Omit sections dns, 80, and 443 of **after.rules** file append for **option 2**.
 
 ## UFW Configuration Update
 
@@ -47,7 +48,7 @@ Edit UFW's after.rules file - [one of 3 files loaded on boot](https://manpages.u
 sudo nano /etc/ufw/after.rules
 ```
 
-Append to bottom of file:
+**Append** to bottom of file:
 
 ```
 # BEGIN UFW CONFIG FOR DOCKER
