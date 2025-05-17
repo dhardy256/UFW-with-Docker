@@ -12,7 +12,7 @@ Do not run in a production environment.<br>
 
 ## Assumptions
 
-You've already got a **dev VM** running **Docker** with **UFW** installed.<br>
+You've already got an [Ubuntu 24](https://ubuntu.com/download/server) **dev VM** running **Docker** with **UFW** installed.<br>
 You've already got UFW configured to allow SSH (port 22) from your workstation.<br>
 There are **no critical services running on this dev VM**.
 
